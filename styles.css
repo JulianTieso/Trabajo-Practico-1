@@ -1,0 +1,114 @@
+:root {
+  --verde: #008C45;
+  --blanco: #F4F5F0;
+  --rojo: #CD212A;
+  --texto: #222;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif; /* Fuente de Google Fonts */
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: var(--blanco);
+  color: var(--texto);
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+header, footer {
+  background-color: var(--verde);
+  color: var(--blanco);
+  padding: 15px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--blanco);
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--rojo);
+  transition: 0.3s;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--rojo);
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--verde);
+  margin: 15px 0;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: var(--texto);
+  margin: 10px 0;
+}
+
+section, article, aside {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+form {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid var(--verde);
+  background-color: #f9f9f9;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: var(--rojo);
+  color: var(--blanco);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--verde);
+}
+
+figure {
+  text-align: center;
+  margin: 20px 0;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: var(--texto);
+  margin-top: 5px;
+}
