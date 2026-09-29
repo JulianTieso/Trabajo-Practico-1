@@ -1,8 +1,8 @@
 :root {
-  --verde: #008C45;
   --blanco: #F4F5F0;
   --rojo: #CD212A;
   --texto: #222;
+  --verde: #008C45;
 }
 
 * {
@@ -38,12 +38,12 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: var(--blanco);
+  color: var(--rojo);
   font-weight: bold;
 }
 
 nav a:hover {
-  color: var(--rojo);
+  color: var(--blanco);
   transition: 0.3s;
 }
 
