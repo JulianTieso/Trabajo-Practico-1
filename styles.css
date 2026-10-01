@@ -1,6 +1,6 @@
 :root {
   --blanco: #F4F5F0;
-  --rojo: #CD212A;
+  --rojo: #cd212a;
   --texto: #222;
   --verde: #008C45;
 }
@@ -111,4 +111,20 @@ figcaption {
   font-size: 0.9rem;
   color: var(--texto);
   margin-top: 5px;
+}
+
+a {
+    color: #8B3A3A;
+    text-decoration: none;
+}
+
+ol {
+  list-style: none;
+}
+
+.imagenBanner {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
 }
