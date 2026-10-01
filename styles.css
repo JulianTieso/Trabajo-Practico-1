@@ -1,3 +1,4 @@
+/* Variables de colores */
 :root {
   --blanco: #F4F5F0;
   --rojo: #CD212A;
@@ -5,12 +6,14 @@
   --verde: #008C45;
 }
 
+/* Reset general */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Estilos generales y tipografía */
 body {
   font-family: 'Roboto', sans-serif; /* Fuente de Google Fonts */
   font-size: 16px;
@@ -22,13 +25,16 @@ body {
   padding: 20px;
 }
 
+/* Encabezado y pie de página */
 header, footer {
-  background-color: var(--verde);
-  color: var(--blanco);
+  background-color: var(--blanco);
+  color: var(--texto);
+  border-bottom: 5px solid var(--verde);
   padding: 15px;
   text-align: center;
 }
 
+/* Navegación */
 nav {
   display: flex;
   justify-content: center;
@@ -43,10 +49,11 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--blanco);
-  transition: 0.3s;
+  color: var(--texto);
+  text-decoration: underline;
 }
 
+/* Títulos */
 h1 {
   font-size: 2rem;
   color: var(--rojo);
@@ -65,6 +72,7 @@ h3 {
   margin: 10px 0;
 }
 
+/* Secciones de contenido */
 section, article, aside {
   margin-bottom: 25px;
   padding: 15px;
@@ -76,6 +84,7 @@ p {
   margin-bottom: 10px;
 }
 
+/* Formulario */
 form {
   margin-top: 20px;
   padding: 15px;
@@ -102,6 +111,7 @@ button:hover {
   background-color: var(--verde);
 }
 
+/* Imágenes y epígrafes */
 figure {
   text-align: center;
   margin: 20px 0;
@@ -111,4 +121,37 @@ figcaption {
   font-size: 0.9rem;
   color: var(--texto);
   margin-top: 5px;
+}
+
+/* Pagina de lugares: listas */
+.lugares ol,
+.lugares ul {
+  padding-left: 25px;
+  margin-bottom: 15px;
+}
+
+/* Pagina de lugares: subtitulos */
+.lugares h4{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Pagina de lugares: enlaces */
+.lugares a {
+  color: var(--rojo);
+}
+.lugares a:hover{
+  color: var(--texto);
+}
+
+/* Página de lugares: imágenes */
+.lugares img {
+  width: 400px;
+  height: auto;
+}
+
+/* Pagina de lugares: contenido principal*/
+.lugares {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
