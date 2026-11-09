@@ -401,3 +401,11 @@ footer {
   border-bottom: 0;
   border-top: 5px solid var(--verde);
 }
+
+.foto-lugar {
+    transition: transform 0.3s ease;
+}
+
+.foto-lugar:hover {
+    transform: scale(1.03);
+}
