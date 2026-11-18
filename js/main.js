@@ -1,0 +1,52 @@
+// =========================================================
+// JavaScript del sitio de Roma
+// =========================================================
+
+// ---------- Modo oscuro ----------
+// El botón de la navbar cambia el sitio a colores oscuros y,
+// al hacer clic de nuevo, vuelve a los colores claros.
+// La elección se guarda en el navegador para que se mantenga
+// al pasar de una página a otra.
+
+const botonModoOscuro = document.getElementById("btnModoOscuro");
+
+// Aplica (o quita) el modo oscuro y actualiza el texto del botón
+function aplicarModo(oscuro) {
+  document.body.classList.toggle("modo-oscuro", oscuro);
+
+  // data-bs-theme hace que los componentes de Bootstrap
+  // (acordeón, formularios, listas) también se vean oscuros
+  document.documentElement.setAttribute("data-bs-theme", oscuro ? "dark" : "light");
+
+  botonModoOscuro.textContent = oscuro ? "☀️ Modo claro" : "🌙 Modo oscuro";
+  botonModoOscuro.setAttribute("aria-pressed", oscuro);
+}
+
+// Lee la última elección guardada (si el navegador lo permite)
+function leerPreferencia() {
+  try {
+    return localStorage.getItem("modo") === "oscuro";
+  } catch (error) {
+    return false;
+  }
+}
+
+// Guarda la elección para las demás páginas
+function guardarPreferencia(oscuro) {
+  try {
+    localStorage.setItem("modo", oscuro ? "oscuro" : "claro");
+  } catch (error) {
+    // Si el navegador no permite guardar, el botón funciona igual
+  }
+}
+
+// Al cargar la página se aplica el modo guardado
+aplicarModo(leerPreferencia());
+
+// Al hacer clic se invierte el modo actual
+botonModoOscuro.addEventListener("click", function () {
+  document.body.classList.add("con-transicion");
+  const oscuro = !document.body.classList.contains("modo-oscuro");
+  aplicarModo(oscuro);
+  guardarPreferencia(oscuro);
+});
