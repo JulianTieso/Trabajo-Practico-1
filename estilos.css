@@ -276,6 +276,8 @@ form[id] {
 }
 
 
+/* Bootstrap - personalizaciones */
+
 body {
   max-width: none;
   padding: 0;
@@ -408,4 +410,98 @@ footer {
 
 .foto-lugar:hover {
     transform: scale(1.03);
+}
+
+
+/* Modo oscuro (JavaScript: js/main.js) */
+:root {
+  --oscuro-fondo: #16191c;
+  --oscuro-superficie: #212529;
+  --oscuro-borde: #3a3f44;
+  --oscuro-texto: #e6e6e6;
+  --verde-claro: #4cd38a;
+  --rojo-claro: #ff8a8f;
+}
+
+/* Botón del modo oscuro: anula el ancho de la regla button de la Etapa 2 */
+.acciones-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-tema {
+  width: auto;
+  margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+  .acciones-nav {
+    margin-left: 1rem;
+  }
+}
+
+/* Colores oscuros: se activan cuando el body tiene la clase modo-oscuro */
+body.modo-oscuro {
+  background-color: var(--oscuro-fondo);
+  color: var(--oscuro-texto);
+}
+
+body.modo-oscuro section,
+body.modo-oscuro article,
+body.modo-oscuro aside {
+  background-color: var(--oscuro-superficie);
+  border-color: var(--oscuro-borde);
+  color: var(--oscuro-texto);
+}
+
+body.modo-oscuro footer {
+  background-color: var(--oscuro-superficie);
+  color: var(--oscuro-texto);
+}
+
+body.modo-oscuro form {
+  background-color: var(--oscuro-fondo);
+}
+
+body.modo-oscuro h2,
+body.modo-oscuro .datos-grid dt {
+  color: var(--verde-claro);
+}
+
+body.modo-oscuro h3,
+body.modo-oscuro h4,
+body.modo-oscuro figcaption {
+  color: var(--oscuro-texto);
+}
+
+body.modo-oscuro a:not(.btn):not(.nav-link):not(.navbar-brand) {
+  color: var(--rojo-claro);
+}
+
+body.modo-oscuro .btn-outline-success {
+  --bs-btn-color: var(--verde-claro);
+  --bs-btn-border-color: var(--verde-claro);
+  --bs-btn-hover-color: var(--oscuro-fondo);
+  --bs-btn-hover-bg: var(--verde-claro);
+  --bs-btn-hover-border-color: var(--verde-claro);
+}
+
+body.modo-oscuro .accordion {
+  --bs-accordion-active-color: var(--verde-claro);
+  --bs-accordion-active-bg: var(--oscuro-fondo);
+}
+
+body.modo-oscuro .accordion-button:hover {
+  background-color: var(--oscuro-fondo);
+}
+
+/* Transición suave al cambiar de modo: solo al hacer clic en el botón
+   (main.js agrega la clase con-transicion), así no parpadea al cargar */
+body.con-transicion,
+body.con-transicion section,
+body.con-transicion article,
+body.con-transicion aside,
+body.con-transicion footer {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
