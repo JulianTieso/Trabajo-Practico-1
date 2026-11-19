@@ -53,7 +53,7 @@
                         <h2>Escríbenos</h2>
                         <p>¿Tienes dudas o quieres <strong>más información</strong> sobre nuestros paquetes turísticos? <em>Escríbenos</em>:</p>
 
-                        <form id="formulario" action="mailto:turismo@roma.com" method="post" enctype="text/plain">
+                        <form id="formulario" action="mailto:turismo@roma.com" method="post" enctype="text/plain" novalidate>
                             <label class="form-label" for="nombre">Nombre:</label>
                             <input class="form-control" type="text" id="nombre" name="nombre" required>
 
@@ -64,6 +64,7 @@
                             <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
 
                             <button class="btn btn-primary" type="submit">Enviar</button>
+                            <div id="mensajeFormulario"></div>
                         </form>
                     </section>
 
