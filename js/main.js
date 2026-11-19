@@ -50,3 +50,28 @@ botonModoOscuro.addEventListener("click", function () {
   aplicarModo(oscuro);
   guardarPreferencia(oscuro);
 });
+
+//Validacion de formulario
+const formulario = document.getElementById("formulario");
+
+if (formulario) {
+    formulario.addEventListener("submit", function(event) {
+        const nombre = formulario.querySelector('input[name="nombre"]');
+        const correo = formulario.querySelector('input[type="email"]');
+        const mensaje = formulario.querySelector("textarea");
+        const aviso = document.getElementById("mensajeFormulario");
+
+        if (nombre.value.trim() === "" || correo.value.trim() === "" || mensaje.value.trim() === "") {
+            event.preventDefault();
+            aviso.textContent = "Por favor, completá todos los campos.";
+            aviso.style.color = "red";
+        } else if (!correo.checkValidity()) {
+            event.preventDefault();
+            aviso.textContent = "Ingresá un correo electrónico válido.";
+            aviso.style.color = "red";
+        } else {
+            aviso.textContent = "Formulario completado correctamente.";
+            aviso.style.color = "green";
+        }
+    });
+}
