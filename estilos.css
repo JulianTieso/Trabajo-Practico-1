@@ -522,3 +522,11 @@ body.con-transicion aside,
 body.con-transicion footer {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.ocultar {
+  display: none;
+}
+
+.mostrar {
+  display: block;
+}
