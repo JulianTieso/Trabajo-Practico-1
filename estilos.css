@@ -171,6 +171,23 @@ ol {
     display: block;
 }
 
+/* Estilos para las tarjetas de los barrios */
+.barrio-imagen {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 5px;}
+
+.barrio-card h3 {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.barrio-card p {
+    font-size: 0.9rem;
+}
 
 /* Flexbox */
 .grilla-flex {
